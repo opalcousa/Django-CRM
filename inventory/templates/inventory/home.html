@@ -5,5 +5,12 @@
 </head>
 <body>
     <h1>Welcome to the Inventory Home Page!</h1>
+    <ul>
+        <li><a href="{% url 'inventory:products' %}">Products</a></li>
+        <li><a href="{% url 'inventory:stocks' %}">Stocks</a></li>
+        <li><a href="{% url 'inventory:suppliers' %}">Suppliers</a></li>
+        <li><a href="{% url 'inventory:purchase_orders' %}">Purchase Orders</a></li>
+        <li><a href="{% url 'inventory:sales_orders' %}">Sales Orders</a></li>
+    </ul>
 </body>
 </html>
