@@ -9,7 +9,7 @@
     <h1>Supplier List</h1>
     <ul>
     {% for supplier in object_list %}
-        <li>{{ supplier.name }}: {{ supplier.contact_info }}</li>
+        <li><a href="{% url 'inventory:supplier_detail' supplier.id %}">{{ supplier.name }}: {{ supplier.contact_info }}</a></li>
     {% empty %}
         <li>No suppliers available.</li>
     {% endfor %}

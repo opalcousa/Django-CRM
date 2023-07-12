@@ -9,7 +9,7 @@
     <h1>Sales Order List</h1>
     <ul>
     {% for sales_order in object_list %}
-        <li>{{ sales_order.product.name }}: {{ sales_order.quantity }}</li>
+        <li><a href="{% url 'inventory:sales_order_detail' sales_order.id %}">{{ sales_order.product.name }}: {{ sales_order.quantity }}</a></li>
     {% empty %}
         <li>No sales orders available.</li>
     {% endfor %}

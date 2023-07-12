@@ -9,7 +9,7 @@
     <h1>Purchase Order List</h1>
     <ul>
     {% for purchase_order in object_list %}
-        <li>{{ purchase_order.product.name }} from {{ purchase_order.supplier.name }}: {{ purchase_order.quantity }}</li>
+        <li><a href="{% url 'inventory:purchase_order_detail' purchase_order.id %}">{{ purchase_order.product.name }} from {{ purchase_order.supplier.name }}: {{ purchase_order.quantity }}</a></li>
     {% empty %}
         <li>No purchase orders available.</li>
     {% endfor %}
