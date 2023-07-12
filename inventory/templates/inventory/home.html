@@ -9,10 +9,15 @@
     <h1>Welcome to the Inventory Home Page!</h1>
     <ul class="list-group">
         <li class="list-group-item"><a href="{% url 'inventory:products' %}">Products</a></li>
+        <li class="list-group-item"><a href="{% url 'inventory:new_product' %}">Add Product</a></li>
         <li class="list-group-item"><a href="{% url 'inventory:stocks' %}">Stocks</a></li>
+        <li class="list-group-item"><a href="{% url 'inventory:new_stock' %}">Add Stock</a></li>
         <li class="list-group-item"><a href="{% url 'inventory:suppliers' %}">Suppliers</a></li>
+        <li class="list-group-item"><a href="{% url 'inventory:new_supplier' %}">Add Supplier</a></li>
         <li class="list-group-item"><a href="{% url 'inventory:purchase_orders' %}">Purchase Orders</a></li>
+        <li class="list-group-item"><a href="{% url 'inventory:new_purchase_order' %}">Add Purchase Order</a></li>
         <li class="list-group-item"><a href="{% url 'inventory:sales_orders' %}">Sales Orders</a></li>
+        <li class="list-group-item"><a href="{% url 'inventory:new_sales_order' %}">Add Sales Order</a></li>
     </ul>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
