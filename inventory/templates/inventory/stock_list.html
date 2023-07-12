@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock List</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Stock List</h1>
+    <ul>
+    {% for stock in object_list %}
+        <li>{{ stock.product.name }}: {{ stock.quantity }}</li>
+    {% empty %}
+        <li>No stocks available.</li>
+    {% endfor %}
+    </ul>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
