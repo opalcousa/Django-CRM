@@ -3,6 +3,7 @@ from . import views
 
 app_name = 'inventory'
 urlpatterns = [
+    path('', views.InventoryHomeView.as_view(), name='inventory_home'),
     path('products/', views.ProductListView.as_view(), name='products'),
     path('products/new/', views.ProductCreateView.as_view(), name='new_product'),
     path('stocks/', views.StockListView.as_view(), name='stocks'),
