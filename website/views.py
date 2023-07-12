@@ -10,7 +10,7 @@ def home(request):
 	records = Record.objects.all()
 	# Check to see if logging in
 	if request.method == 'POST':
-		username = request.POST['username']
+    username = request.POST.get('username')
 		password = request.POST['password']
 		# Authenticate
 		user = authenticate(request, username=username, password=password)
