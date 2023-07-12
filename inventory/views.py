@@ -9,6 +9,9 @@ class InventoryHomeView(generic.TemplateView):
 class ProductListView(generic.ListView):
     model = Product
 
+class ProductDetailView(generic.DetailView):
+    model = Product
+
 class ProductCreateView(generic.edit.CreateView):
     model = Product
     form_class = ProductForm
@@ -16,6 +19,9 @@ class ProductCreateView(generic.edit.CreateView):
     success_url = '/inventory/products/'
 
 class StockListView(generic.ListView):
+    model = Stock
+
+class StockDetailView(generic.DetailView):
     model = Stock
 
 class StockCreateView(generic.edit.CreateView):
@@ -27,6 +33,9 @@ class StockCreateView(generic.edit.CreateView):
 class SupplierListView(generic.ListView):
     model = Supplier
 
+class SupplierDetailView(generic.DetailView):
+    model = Supplier
+
 class SupplierCreateView(generic.edit.CreateView):
     model = Supplier
     form_class = SupplierForm
@@ -36,6 +45,9 @@ class SupplierCreateView(generic.edit.CreateView):
 class PurchaseOrderListView(generic.ListView):
     model = PurchaseOrder
 
+class PurchaseOrderDetailView(generic.DetailView):
+    model = PurchaseOrder
+
 class PurchaseOrderCreateView(generic.edit.CreateView):
     model = PurchaseOrder
     form_class = PurchaseOrderForm
@@ -43,6 +55,9 @@ class PurchaseOrderCreateView(generic.edit.CreateView):
     success_url = '/inventory/purchase_orders/'
 
 class SalesOrderListView(generic.ListView):
+    model = SalesOrder
+
+class SalesOrderDetailView(generic.DetailView):
     model = SalesOrder
 
 class SalesOrderCreateView(generic.edit.CreateView):
