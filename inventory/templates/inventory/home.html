@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Inventory Home</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
     <h1>Welcome to the Inventory Home Page!</h1>
     <ul class="list-group">
         <li class="list-group-item"><a href="{% url 'inventory:products' %}">Products</a></li>
