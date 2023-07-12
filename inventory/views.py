@@ -3,6 +3,9 @@ from django.views import generic
 from .models import Product, Stock, Supplier, PurchaseOrder, SalesOrder
 from .forms import ProductForm, StockForm, SupplierForm, PurchaseOrderForm, SalesOrderForm
 
+class InventoryHomeView(generic.TemplateView):
+    template_name = 'inventory/home.html'
+
 class ProductListView(generic.ListView):
     model = Product
 
