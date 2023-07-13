@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Order Detail</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>                                         
+    <h1>{{ object.product.name }}</h1>         
+    <p>Quantity: {{ object.quantity }}</p>     
+    <a href="{% url 'inventory:edit_sales_orde 
+object.id %}" class="btn btn-secondary">Edit</ 
+    <!-- Bootstrap JS -->                      
+    <script                                    
+src="https://stackpath.bootstrapcdn.com/bootst 
+p/4.3.1/js/bootstrap.min.js"></script>         
+</body>    
+</html>
+{% endblock %}
