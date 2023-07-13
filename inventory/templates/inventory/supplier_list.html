@@ -3,11 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <a href="{% url 'inventory:inventory_home' %}" class="btn btn-secondary">Back</a>
     <title>Supplier List</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
+    <a href="{% url 'inventory:inventory_home' %}" class="btn btn-secondary">Back</a>
     <h1>Supplier List</h1>
     <ul>
     {% for supplier in object_list %}

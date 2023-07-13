@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<a href="{% url 'inventory:inventory_home' %}" class="btn btn-secondary">Back</a>
 <form method="post" class="form-horizontal">
     {% csrf_token %}
     {{ form.as_p }}
