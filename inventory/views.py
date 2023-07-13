@@ -18,6 +18,12 @@ class ProductCreateView(generic.edit.CreateView):
     template_name = 'inventory/product_form.html'
     success_url = '/inventory/products/'
 
+class ProductUpdateView(generic.edit.UpdateView):
+    model = Product
+    form_class = ProductForm
+    template_name = 'inventory/product_form.html'
+    success_url = '/inventory/products/'
+
 class StockListView(generic.ListView):
     model = Stock
 
