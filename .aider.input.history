@@ -1,0 +1,570 @@
+
+# 2023-07-12 17:21:06.419682
++/add inventory
+
+# 2023-07-12 17:23:30.006116
++Please edit the `inventory` django app to function like a typical small business would need an inventory system to function.
+
+# 2023-07-12 17:23:51.189248
++yes
+
+# 2023-07-12 17:24:12.450944
++you can find them here: /Users/drakestapleton/Developer/crm/dcrm/inventory
+
+# 2023-07-12 17:25:15.545703
++please continue
+
+# 2023-07-12 17:26:00.268086
++please proceed
+
+# 2023-07-12 17:26:24.155809
++proceed
+
+# 2023-07-12 17:28:17.769330
++/clear
+
+# 2023-07-12 17:28:25.527735
++proceed with the update 
++and delete views.                
+
+# 2023-07-12 17:29:08.005999
++proceed with the update 
++and delete views for our inventory app
+
+# 2023-07-12 17:30:04.748751
++That's not what I meant at all. Please undo that
+
+# 2023-07-12 17:34:08.406216
++/Users/drakestapleton/Developer/crm/dcrm/inventory/admin.py changed, reloading.
++Watching for file changes with StatReloader
++Performing system checks...
++
++System check identified no issues (0 silenced).
++July 12, 2023 - 22:25:02
++Django version 4.2.3, using settings 'dcrm.settings'
++Starting development server at http://127.0.0.1:8000/
++Quit the server with CONTROL-C.
++
++[12/Jul/2023 22:31:23] "GET /add_record/ HTTP/1.1" 200 3030
++Not Found: /inventory
++[12/Jul/2023 22:31:28] "GET /inventory HTTP/1.1" 404 3358
++/Users/drakestapleton/Developer/crm/dcrm/dcrm/urls.py changed, reloading.
++Watching for file changes with StatReloader
++Performing system checks...
++
++Exception in thread django-main-thread:
++Traceback (most recent call last):
++  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.11/threading.py", line 1038, in _bootstrap_inner
++    self.run()
++  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.11/threading.py", line 975, in run
++    self._target(*self._args, **self._kwargs)
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper
++    fn(*args, **kwargs)
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
++    self.check(display_num_errors=True)
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check
++    all_issues = checks.run_checks(
++                 ^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks
++    new_errors = check(app_configs=app_configs, databases=databases)
++                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
++    all_namespaces = _load_all_namespaces(resolver)
++                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
++    url_patterns = getattr(resolver, "url_patterns", [])
++                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__
++    res = instance.__dict__[self.name] = self.func(instance)
++                                         ^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns
++    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
++                       ^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__
++    res = instance.__dict__[self.name] = self.func(instance)
++                                         ^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module
++    return import_module(self.urlconf_name)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.11/importlib/__init__.py", line 126, in import_module
++    return _bootstrap._gcd_import(name[level:], package, level)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
++  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
++  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
++  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
++  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
++  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
++  File "/Users/drakestapleton/Developer/crm/dcrm/dcrm/urls.py", line 7, in <module>
++    path()
++TypeError: _path() missing 2 required positional arguments: 'route' and 'view'
++
+
+# 2023-07-12 17:34:21.559463
++please fix this error: /Users/drakestapleton/Developer/crm/dcrm/inventory/admin.py changed, reloading.
++Watching for file changes with StatReloader
++Performing system checks...
++
++System check identified no issues (0 silenced).
++July 12, 2023 - 22:25:02
++Django version 4.2.3, using settings 'dcrm.settings'
++Starting development server at http://127.0.0.1:8000/
++Quit the server with CONTROL-C.
++
++[12/Jul/2023 22:31:23] "GET /add_record/ HTTP/1.1" 200 3030
++Not Found: /inventory
++[12/Jul/2023 22:31:28] "GET /inventory HTTP/1.1" 404 3358
++/Users/drakestapleton/Developer/crm/dcrm/dcrm/urls.py changed, reloading.
++Watching for file changes with StatReloader
++Performing system checks...
++
++Exception in thread django-main-thread:
++Traceback (most recent call last):
++  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.11/threading.py", line 1038, in _bootstrap_inner
++    self.run()
++  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.11/threading.py", line 975, in run
++    self._target(*self._args, **self._kwargs)
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper
++    fn(*args, **kwargs)
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
++    self.check(display_num_errors=True)
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check
++    all_issues = checks.run_checks(
++                 ^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks
++    new_errors = check(app_configs=app_configs, databases=databases)
++                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
++    all_namespaces = _load_all_namespaces(resolver)
++                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
++    url_patterns = getattr(resolver, "url_patterns", [])
++                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__
++    res = instance.__dict__[self.name] = self.func(instance)
++                                         ^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns
++    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
++                       ^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__
++    res = instance.__dict__[self.name] = self.func(instance)
++                                         ^^^^^^^^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module
++    return import_module(self.urlconf_name)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.11/importlib/__init__.py", line 126, in import_module
++    return _bootstrap._gcd_import(name[level:], package, level)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
++  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
++  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
++  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
++  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
++  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
++  File "/Users/drakestapleton/Developer/crm/dcrm/dcrm/urls.py", line 7, in <module>
++    path()
++TypeError: _path() missing 2 required positional arguments: 'route' and 'view'
++
+
+# 2023-07-12 17:35:16.038324
++Page not found (404)
++Request Method:	GET
++Request URL:	http://127.0.0.1:8000/inventory
++Using the URLconf defined in dcrm.urls, Django tried these URL patterns, in this order:
++
++admin/
++[name='home']
++logout/ [name='logout']
++register/ [name='register']
++record/<int:pk> [name='record']
++delete_record/<int:pk> [name='delete_record']
++add_record/ [name='add_record']
++update_record/<int:pk> [name='update_record']
++inventory/
++The current path, inventory, didn’t match any of these.
++
++
+
+# 2023-07-12 17:36:26.780058
++module 'inventory.views' has no attribute 'InventoryHomeView'
+
+# 2023-07-12 17:38:14.036129
++Exception Type:	TemplateDoesNotExist
++Exception Value:	
++inventory/home.html
+
+# 2023-07-12 17:38:58.859600
++Please connect the home page to the other sub modules of this application
+
+# 2023-07-12 17:40:01.607666
++Great, use boostrap to make it look more modern
+
+# 2023-07-12 17:40:36.014359
++/clear
+
+# 2023-07-12 17:40:37.593482
++Great, use boostrap to make it look more modern
+
+# 2023-07-12 17:42:21.576594
++ile "/opt/homebrew/Caskroom/miniconda/base/lib/python3.11/importlib/__init__.py", line 126, in import_module
++    return _bootstrap._gcd_import(name[level:], package, level)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
++  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
++  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
++  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
++  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
++  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
++  File "/Users/drakestapleton/Developer/crm/dcrm/dcrm/settings.py", line 110, in <module>
++    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# 2023-07-12 17:43:04.732224
++TemplateDoesNotExist at /inventory/products/
++inventory/product_list.html
+
+# 2023-07-12 17:44:31.122611
++TemplateDoesNotExist at /inventory/stocks/
++inventory/stock_list.html
+
+# 2023-07-12 17:45:03.422723
++Please do this with all the other modules
+
+# 2023-07-12 17:46:16.393104
++please make all the html files for this module
+
+# 2023-07-12 17:47:12.945619
++TemplateDoesNotExist at /inventory/purchase_orders/
++inventory/purchaseorder_list.html
++
+
+# 2023-07-12 17:47:25.617577
++/clear
+
+# 2023-07-12 17:47:26.933427
++TemplateDoesNotExist at /inventory/purchase_orders/
++inventory/purchaseorder_list.html
++
+
+# 2023-07-12 17:48:29.602062
++I need a files for a supplier list and the sales orders
+
+# 2023-07-12 17:49:51.856885
++great now please make it possible to add records in a form
+
+# 2023-07-12 17:51:10.209182
++/clear
+
+# 2023-07-12 17:53:01.123360
++In each of the html files, please make the items on the lists clickable
+
+# 2023-07-12 17:53:13.860611
++yes
+
+# 2023-07-12 17:55:09.915689
++Repeat the above step for the other list templates   
++(stock_list.html, supplier_list.html,                
++purchaseorder_list.html, salesorder_list.html),      
++replacing product with the appropriate model name and
++product_detail with the appropriate detail view name.
+
+# 2023-07-12 17:56:11.560420
++TemplateDoesNotExist at /inventory/products/1/
++inventory/product_detail.html
+
+# 2023-07-12 17:56:33.274902
++/clear
+
+# 2023-07-12 17:56:47.493710
++It seems like Django is unable to find the           
++product_detail.html template. This error usually     
++occurs when the template does not exist or the       
++template directory is not correctly configured.      
++
++To fix this, we need to create a product_detail.html 
++file in the inventory/templates/inventory/ directory.
++
++Here's a basic example of what the                   
++product_detail.html file could look like:   
+
+# 2023-07-12 17:58:44.569835
++In the stock menu, it's showing: Product: 
++Product object (1) instead of the actual product name
+
+# 2023-07-12 17:59:16.153619
++TemplateDoesNotExist at /inventory/stocks/1/
++inventory/stock_detail.html
+
+# 2023-07-12 18:00:10.677736
++please move all of the html files into the templates folder instead of inside a subdirectory called inventory
+
+# 2023-07-12 18:02:27.661805
++can you adjust my `website` application to work with my `inventory` app?
+
+# 2023-07-12 18:03:45.542069
++NameError: name 'include' is not defined
+
+# 2023-07-12 18:03:54.390099
++/clear
+
+# 2023-07-12 18:04:03.070612
++  File "/Users/drakestapleton/Developer/crm/dcrm/website/urls.py", line 14, in <module>
++    path('inventory/', include('inventory.urls')),
++                       ^^^^^^^
++NameError: name 'include' is not defined
++
+
+# 2023-07-12 18:04:37.155193
++add inventory to the nav-bar
+
+# 2023-07-12 18:04:57.936795
++dcrm/website/templates/base.html
+
+# 2023-07-12 18:07:07.588427
++NoReverseMatch at /
++Reverse for 'inventory' not found. 'inventory' is not a valid view function or pattern name.
+
+# 2023-07-12 18:08:06.870245
++/Users/drakestapleton/Developer/crm/dcrm/website/templates/base.html
+
+# 2023-07-12 18:08:11.772171
++you can find the file here /Users/drakestapleton/Developer/crm/dcrm/website/templates/base.html
+
+# 2023-07-12 18:08:50.534790
++/Users/drakestapleton/Developer/crm/dcrm/website/templates/navbar.html
+
+# 2023-07-12 18:09:01.091510
++please add inventory to the /Users/drakestapleton/Developer/crm/dcrm/website/templates/navbar.html
+
+# 2023-07-12 18:11:23.859032
++  File "/Users/drakestapleton/Developer/crm/dcrm/website/views.py", line 13, in home
++    username = request.POST['username']
++               ~~~~~~~~~~~~^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
++    raise MultiValueDictKeyError(key)
++django.utils.datastructures.MultiValueDictKeyError: 'username'
+
+# 2023-07-12 18:11:30.837207
++/clear
+
+# 2023-07-12 18:11:32.570395
++  File "/Users/drakestapleton/Developer/crm/dcrm/website/views.py", line 13, in home
++    username = request.POST['username']
++               ~~~~~~~~~~~~^^^^^^^^^^^^
++  File "/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
++    raise MultiValueDictKeyError(key)
++django.utils.datastructures.MultiValueDictKeyError: 'username'
+
+# 2023-07-12 18:14:30.442667
++please add the nav-bar to the inventory application pages
+
+# 2023-07-12 18:15:44.506222
++TemplateSyntaxError at /inventory/
++Unclosed tag on line 2: 'block'. Looking for one of: endblock.
+
+# 2023-07-12 18:17:08.231412
++do the same for each of the html files in this app
+
+# 2023-07-12 18:17:16.765607
++/clear
+
+# 2023-07-12 18:19:58.808068
++TemplateDoesNotExist at /inventory/suppliers/1/
++inventory/supplier_detail.html
+
+# 2023-07-12 18:24:46.545875
++I'm seeing this on my add purchase order form: Supplier: 
++Supplier object (1)
++
+
+# 2023-07-12 18:25:20.955656
++TemplateDoesNotExist at /inventory/purchase_orders/1/
++inventory/purchaseorder_detail.html
+
+# 2023-07-12 18:28:00.912225
++I'm seeing double: Django CRM
++Add Record
++Inventory
++Logout
++
++Product: 
++---------
++
++Supplier: 
++---------
++
++Quantity: 
++
++Product: 
++---------
++
++Supplier: 
++---------
++
++Quantity: 
++
+
+# 2023-07-12 18:28:39.911552
++/clear
+
+# 2023-07-12 18:28:40.772650
++I'm seeing double: Django CRM
++Add Record
++Inventory
++Logout
++
++Product: 
++---------
++
++Supplier: 
++---------
++
++Quantity: 
++
++Product: 
++---------
++
++Supplier: 
++---------
++
++Quantity: 
++
+
+# 2023-07-13 06:00:43.314566
++MultiValueDictKeyError at /
++'username'
++Request Method:	POST
++Request URL:	http://localhost:8000/
++Django Version:	4.2.3
++Exception Type:	MultiValueDictKeyError
++Exception Value:	
++'username'
++Exception Location:	/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages/django/utils/datastructures.py, line 86, in __getitem__
++Raised during:	website.views.home
++Python Executable:	/Users/drakestapleton/Developer/crm/crm/bin/python
++Python Version:	3.11.4
++Python Path:	
++['/Users/drakestapleton/Developer/crm/dcrm',
++ '/opt/homebrew/Caskroom/miniconda/base/lib/python311.zip',
++ '/opt/homebrew/Caskroom/miniconda/base/lib/python3.11',
++ '/opt/homebrew/Caskroom/miniconda/base/lib/python3.11/lib-dynload',
++ '/Users/drakestapleton/Developer/crm/crm/lib/python3.11/site-packages']
++Server time:	Thu, 13 Jul 2023 11:00:17 +0000
+
+# 2023-07-13 06:17:57.277637
++/clear
+
+# 2023-07-13 06:18:49.861778
++please edit the inventory app homepage to show the various sub-modules in a grid format. I'm immagining a grid of squares that are clickable into the submenus.
+
+# 2023-07-13 06:20:28.946811
++please add the rest of the cards
+
+# 2023-07-13 06:21:14.390412
++/clear
+
+# 2023-07-13 06:21:17.289460
++please add To add the rest of the cards, we need to modify 
++the inventory/templates/inventory/home.html     
++file.                                           
++
++Here are the steps:                             
++
++ 1 Add new cards for each of the remaining      
++   sub-modules: Purchase Orders and Sales       
++   Orders.                                 
+
+# 2023-07-13 06:22:35.851527
++can you add a backbutton to the submenus?
+
+# 2023-07-13 06:23:22.638273
++please proceed
+
+# 2023-07-13 06:24:34.240748
++/drop dcrm/settings.py
+
+# 2023-07-13 06:24:44.823905
++/drop dcrm/urls.py
+
+# 2023-07-13 06:24:51.329398
++can you add a backbutton to the submenus?
+
+# 2023-07-13 06:26:18.768091
++/clear
+
+# 2023-07-13 06:31:54.790599
++in the `/Users/drakestapleton/Developer/crm/dcrm/inventory/templates/inventory/product_detail.html` file, please adjust the backbutton to direct to the product list page instead of home
+
+# 2023-07-13 06:33:59.641220
++/clear
+
+# 2023-07-13 06:34:21.686933
++edit the backbutton in the `StockDetailView`
+
+# 2023-07-13 06:34:41.878640
++make the button direct to the stock list file instead of home
+
+# 2023-07-13 06:41:17.347246
++make the button direct to the purchase order list file instead of home
+
+# 2023-07-13 06:45:10.691866
++Can you add headers to each of my subpages? I want a modern looking header with the module name written out in teh first row
+
+# 2023-07-13 06:48:40.447957
++/clear
+
+# 2023-07-13 06:48:57.780435
++I need a way to edit the products within the detail page
+
+# 2023-07-13 06:49:59.217878
++add a similar button to my stock page
+
+# 2023-07-13 06:51:06.601903
++/clear
+
+# 2023-07-13 06:51:24.469582
++Add an edit button to the sales_order detail page
+
+# 2023-07-13 06:54:19.291365
++please create the salesorderupdateview
+
+# 2023-07-13 06:55:48.291510
++Page not found (404)
++Request Method:	GET
++Request URL:	http://localhost:8000/inventory/sales_orders/1/%7B%25%20url%20'inventory:edit_sales_orde%20object.id%20%25%7D
++
+
+# 2023-07-13 06:55:57.592585
++/clear
+
+# 2023-07-13 06:55:59.619349
++Page not found (404)
++Request Method:	GET
++Request URL:	http://localhost:8000/inventory/sales_orders/1/%7B%25%20url%20'inventory:edit_sales_orde%20object.id%20%25%7D
++
+
+# 2023-07-13 06:57:39.631037
++/clear
+
+# 2023-07-13 06:57:46.189959
++/ls
+
+# 2023-07-13 06:57:59.692266
++/drop dcrm/__pycache__
+
+# 2023-07-13 06:58:06.936178
++/drop dcrm
+
+# 2023-07-13 06:58:34.761029
++/drop all
+
+# 2023-07-13 06:58:37.288805
++/drop
+
+# 2023-07-13 07:02:01.974000
++can you add the functionality of uploading a csv filled with sales orders?
+
+# 2023-07-13 07:02:43.885708
++/add /Users/drakestapleton/Developer/crm/dcrm/inventory/templates/inventory
+
+# 2023-07-13 07:02:50.873782
++can you add the functionality of uploading a csv filled with sales orders? /Users/drakestapleton/Developer/crm/dcrm/inventory/templates/inventory
