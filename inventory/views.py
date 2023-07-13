@@ -77,3 +77,9 @@ class SalesOrderCreateView(generic.edit.CreateView):
     form_class = SalesOrderForm
     template_name = 'inventory/sales_order_form.html'
     success_url = '/inventory/sales_orders/'
+
+class SalesOrderUpdateView(generic.edit.UpdateView):
+    model = SalesOrder
+    form_class = SalesOrderForm
+    template_name = 'inventory/sales_order_form.html'
+    success_url = '/inventory/sales_orders/'
