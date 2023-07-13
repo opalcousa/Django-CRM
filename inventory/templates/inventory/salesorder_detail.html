@@ -10,8 +10,7 @@
 <body>                                         
     <h1>{{ object.product.name }}</h1>         
     <p>Quantity: {{ object.quantity }}</p>     
-    <a href="{% url 'inventory:edit_sales_orde 
-object.id %}" class="btn btn-secondary">Edit</ 
+    <a href="{% url 'inventory:edit_sales_order' object.id %}" class="btn btn-secondary">Edit</a>
     <!-- Bootstrap JS -->                      
     <script                                    
 src="https://stackpath.bootstrapcdn.com/bootst 
