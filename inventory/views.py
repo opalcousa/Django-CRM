@@ -36,6 +36,12 @@ class StockCreateView(generic.edit.CreateView):
     template_name = 'inventory/stock_form.html'
     success_url = '/inventory/stocks/'
 
+class StockUpdateView(generic.edit.UpdateView):
+    model = Stock
+    form_class = StockForm
+    template_name = 'inventory/stock_form.html'
+    success_url = '/inventory/stocks/'
+
 class SupplierListView(generic.ListView):
     model = Supplier
 
