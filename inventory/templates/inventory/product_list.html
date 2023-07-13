@@ -10,6 +10,8 @@
 <body>
     <a href="{% url 'inventory:inventory_home' %}" class="btn btn-secondary">Back</a>
     <h1>Product List</h1>
+    <a href="{% url 'inventory:inventory_home' %}" class="btn btn-secondary">Back</a>
+    <h1>Product List</h1>
     <ul>
     {% for product in object_list %}
         <li><a href="{% url 'inventory:product_detail' product.id %}">{{ product.name }}</a></li>
