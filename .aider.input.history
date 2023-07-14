@@ -568,3 +568,6 @@
 
 # 2023-07-13 07:02:50.873782
 +can you add the functionality of uploading a csv filled with sales orders? /Users/drakestapleton/Developer/crm/dcrm/inventory/templates/inventory
+
+# 2023-07-14 05:23:17.244814
++I just created a new django application called formulation. It's located in a folder in the current directory. Can you please intergrate this application into my existing website including the addition of a clickable link in our already existing nav-bar code.
