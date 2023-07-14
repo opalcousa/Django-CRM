@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Ingredient Detail</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <p>Name: {{ object.name }}</p>
+        <p>Description: {{ object.description }}</p>
+        <p>Quantity: {{ object.quantity }}</p>
+
+        <a href="{% url 'formulation:ingredient-update' object.id %}" class="btn btn-primary">Update</a>
+        <a href="{% url 'formulation:ingredient-delete' object.id %}" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{% endblock %}

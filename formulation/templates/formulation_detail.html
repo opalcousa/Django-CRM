@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Formulation Detail</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <p>Name: {{ object.name }}</p>
+        <p>Instructions: {{ object.instructions }}</p>
+        <h4>Ingredients:</h4>
+        <ul>
+            {% for formulationingredient in object.formulationingredient_set.all %}
+            <li>{{ formulationingredient.ingredient.name }} - Quantity: {{ formulationingredient.quantity }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'formulation:formulation-update' object.id %}" class="btn btn-primary">Update</a>
+        <a href="{% url 'formulation:formulation-delete' object.id %}" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{% endblock %}

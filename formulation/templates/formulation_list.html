@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Formulations</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <ul>
+            {% for formulation in formulations %}
+            <li>
+                <a href="{% url 'formulation:formulation-detail' formulation.id %}">{{ formulation.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'formulation:formulation-create' %}" class="btn btn-primary">Add new Formulation</a>
+    </div>
+</div>
+{% endblock %}
