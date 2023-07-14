@@ -574,3 +574,6 @@
 
 # 2023-07-14 05:26:07.542320
 +/commit
+
+# 2023-07-14 05:26:13.257429
++I just created a new django application called formulation. It's located in a folder in the current directory. Can you please intergrate this application into my existing website including the addition of a clickable link in our already existing nav-bar code.
