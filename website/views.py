@@ -4,7 +4,7 @@ from django.contrib import messages
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
 from inventory.models import Product, Stock, Supplier, PurchaseOrder, SalesOrder
-
+from formulas.models import Formula
 
 def home(request):
 	records = Record.objects.all()
