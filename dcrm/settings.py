@@ -28,8 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'inventory',
+    'stock',
     'formulas',
+    'accounting',
     'crispy_forms',
 ]
 

@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('quantity', models.IntegerField()),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='inventory.product')),
+                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='stock.product')),
             ],
         ),
         migrations.CreateModel(
@@ -41,7 +41,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('quantity', models.IntegerField()),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='inventory.product')),
+                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='stock.product')),
             ],
         ),
         migrations.CreateModel(
@@ -49,8 +49,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('quantity', models.IntegerField()),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='inventory.product')),
-                ('supplier', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='inventory.supplier')),
+                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='stock.product')),
+                ('supplier', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='stock.supplier')),
             ],
         ),
     ]

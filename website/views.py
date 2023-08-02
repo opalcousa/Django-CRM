@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
-from inventory.models import Product, Stock, Supplier, PurchaseOrder, SalesOrder
+from stock.models import Product, Stock, Supplier
 from formulas.models import Formula
 
 def home(request):
