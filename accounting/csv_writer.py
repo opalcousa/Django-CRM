@@ -1,11 +1,10 @@
 import csv
 import os
+import io
 
 class CSVWriter:
     def __init__(self, filename):
         self.filename = filename
-
-    import io
 
     def write(self, orders):
         output = io.StringIO()
