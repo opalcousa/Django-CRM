@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from accounting.models import Order
+from accounting.order import Order
 
 def dashboard(request):
     orders = Order.objects.all()
