@@ -53,9 +53,12 @@ def generate_orders(request):
         form = OrderGeneratorForm()
     return render(request, 'orders.html', {'form': form})
 
+import os
+
 def export_orders(request):
     orders = Order.objects.all()
-    csv_writer = CSVWriter('orders.csv')
+    os.makedirs('reports', exist_ok=True)
+    csv_writer = CSVWriter('reports/orders.csv')
     csv_content = csv_writer.write(orders)
     response = HttpResponse(csv_content, content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="orders.csv"'
