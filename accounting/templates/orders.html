@@ -16,9 +16,9 @@ Orders
 <table class="table">
     <thead>
         <tr>
-            <th>Order ID</th>
+            <th>Order Number</th>
             <th>Customer Name</th>
-            <th>Product</th>
+            <th>Products Purchased</th>
             <th>Quantity</th>
             <th>Order Date</th>
         </tr>
@@ -28,7 +28,7 @@ Orders
         <tr>
             <td>{{ order.id }}</td>
             <td>{{ order.customer_name }}</td>
-            <td>{{ order.product.name }}</td>
+            <td>{{ order.product_names }}</td>
             <td>{{ order.quantity }}</td>
             <td>{{ order.order_date }}</td>
         </tr>
