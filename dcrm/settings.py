@@ -76,6 +76,8 @@ DATABASES = {
         'NAME': os.getenv('MONGO_DATABASE'),
         'CLIENT': {
             'host': os.getenv('DATABASE_URL'),
+            'username': os.getenv('MONGO_USERNAME'),
+            'password': os.getenv('MONGO_PASSWORD'),
             'authMechanism': 'SCRAM-SHA-1',
         },
     },
