@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Generate Order
+{% endblock %}
+
+{% block content %}
+<h1>Generate Order</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Generate Order</button>
+</form>
+{% endblock %}
