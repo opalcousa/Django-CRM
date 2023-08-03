@@ -6,7 +6,20 @@ Profit & Loss Statement
 
 {% block content %}
 <h1>Profit & Loss Statement</h1>
-<p>Total Sales: ${{ total_sales }}</p>
-<p>Total Purchase Orders: ${{ total_purchase_orders }}</p>
-<p>Profit/Loss: ${{ profit_loss }}</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Total Sales</th>
+            <th>Total Purchase Orders</th>
+            <th>Profit/Loss</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>${{ total_sales }}</td>
+            <td>${{ total_purchase_orders }}</td>
+            <td>${{ profit_loss }}</td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}
