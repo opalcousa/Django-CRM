@@ -10,18 +10,6 @@ urlpatterns = [
     path('products/<int:product_id>/', views.product_detail, name='product_detail'),
     path('profit_loss/', views.profit_loss, name='profit_loss'),
     path('index/', views.index_view, name='index_view'),  # Add this line
-]
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('generate_orders/', views.generate_orders, name='generate_orders'),
-    path('export_orders/', views.export_orders, name='export_orders'),
-]
-from django.urls import path
-from . import views
-
-urlpatterns = [
     path('generate_orders/', views.generate_orders, name='generate_orders'),
     path('export_orders/', views.export_orders, name='export_orders'),
 ]

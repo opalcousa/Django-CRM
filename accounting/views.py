@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from accounting.order import Order
-from django.shortcuts import render
 from .order_generator import OrderGenerator
-import datetime
+from .forms import OrderGeneratorForm
+from .csv_writer import CSVWriter
+from accounting.product import Product
 
 def dashboard(request):
     orders = Order.objects.all()
@@ -29,11 +31,6 @@ def profit_loss(request):
     total_purchase_orders = 500  # Replace with actual calculation
     profit_loss = total_sales - total_purchase_orders  # Replace with actual calculation
     return render(request, 'profit_loss.html', {'total_sales': total_sales, 'total_purchase_orders': total_purchase_orders, 'profit_loss': profit_loss})
-from django.shortcuts import render
-from .order_generator import OrderGenerator
-from .forms import OrderGeneratorForm
-from .csv_writer import CSVWriter
-from django.http import HttpResponse
 
 def generate_orders(request):
     if request.method == 'POST':
@@ -55,5 +52,6 @@ def generate_orders(request):
     else:
         form = OrderGeneratorForm()
     return render(request, 'accounting/orders.html', {'form': form})
+
 def index_view(request):
     return render(request, 'index.html')
