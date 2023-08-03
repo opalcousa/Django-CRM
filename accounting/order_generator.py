@@ -41,8 +41,10 @@ class OrderGenerator:
         sets_of_three = total_quantity // 3
         individual_products = total_quantity % 3
         total_price = sets_of_three * 25 + individual_products * 10
-        return {'customer_name': customer_name, 'product_names': product_names, 'order_date': order_date_str,
+        order = {'customer_name': customer_name, 'product_names': product_names, 'order_date': order_date_str,
                 'total_price': total_price}
+        self.orders_collection.insert_one(order)
+        return order
 
     def generate_orders(self, n):
         orders = [self.generate_order() for _ in range(n)]
