@@ -76,8 +76,15 @@ DATABASES = {
     },
     'mongodb': {
         'ENGINE': 'djongo',
-        'NAME': 'your-db-name',
-    }
+        'ENFORCE_SCHEMA': False,
+        'NAME': os.getenv('MONGO_DB_NAME'),
+        'CLIENT': {
+            'host': os.getenv('MONGO_DB_HOST'),
+            'username': os.getenv('MONGO_DB_USER'),
+            'password': os.getenv('MONGO_DB_PASSWORD'),
+            'authMechanism': 'SCRAM-SHA-1',
+        },
+    },
 }
 
 DATABASE_ROUTERS = ['path.to.your.router.AccountingRouter']
