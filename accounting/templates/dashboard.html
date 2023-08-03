@@ -7,56 +7,37 @@ Dashboard
 {% block content %}
 <h1>Dashboard</h1>
 
-<div class="row mb-3">
-    <div class="col-md-6">
-        <h2>Orders</h2>
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <h2>Orders</h2>
+        </div>
+        <div class="col-md-6">
+            <input type="text" id="order-filter" class="form-control" placeholder="Filter by customer name">
+        </div>
     </div>
-    <div class="col-md-6">
-        <input type="text" id="order-filter" class="form-control" placeholder="Filter by customer name">
-    </div>
+
+    <table id="order-table" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer Name</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Order Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.customer_name }}</td>
+                <td>{{ order.product.name }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.order_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
-
-<table id="order-table" class="table table-striped">
-    <thead>
-        <tr>
-            <th>Order ID</th>
-            <th>Customer Name</th>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Order Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for order in orders %}
-        <tr>
-            <td>{{ order.id }}</td>
-            <td>{{ order.customer_name }}</td>
-            <td>{{ order.product.name }}</td>
-            <td>{{ order.quantity }}</td>
-            <td>{{ order.order_date }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
-<script>
-    $(document).ready(function() {
-        // Initialize DataTable with filtering options
-        $('#order-table').DataTable({
-            "paging": true,
-            "searching": true,
-            "ordering": true,
-            "info": true,
-            "responsive": true
-        });
-
-        // Add event listener for filtering by customer name
-        $('#order-filter').on('keyup', function() {
-            var filterValue = $(this).val().toLowerCase();
-            $('#order-table tbody tr').filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(filterValue) > -1)
-            });
-        });
-    });
-</script>
 {% endblock %}

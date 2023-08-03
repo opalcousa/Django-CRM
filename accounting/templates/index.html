@@ -5,7 +5,9 @@ Accounting Home
 {% endblock %}
 
 {% block content %}
-<h1>Welcome to the Accounting Application</h1>
-<p>Here you can manage all your accounting needs.</p>
-<a href="{% url 'accounting:generate_orders' %}">Generate Orders</a>
+<div class="container">
+    <h1>Welcome to the Accounting Application</h1>
+    <p>Here you can manage all your accounting needs.</p>
+    <a href="{% url 'accounting:generate_orders' %}" class="btn btn-primary">Generate Orders</a>
+</div>
 {% endblock %}
