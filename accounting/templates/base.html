@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <style>
         /* Add CSS styles for the nav-bar */
         .navbar {
@@ -34,6 +35,40 @@
             <li><a href="/profit_loss">Profit & Loss</a></li>
         </ul>
     </div>
-    {% block content %}{% endblock %}
+    <div class="container">
+        <br/>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTable with filtering options
+            $('#order-table').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "responsive": true
+            });
+
+            // Add event listener for filtering by customer name
+            $('#order-filter').on('keyup', function() {
+                var filterValue = $(this).val().toLowerCase();
+                $('#order-table tbody tr').filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(filterValue) > -1)
+                });
+            });
+        });
+    </script>
 </body>
 </html>
