@@ -55,7 +55,7 @@ def generate_orders(request):
 
 def export_orders(request):
     orders = Order.objects.all()
-    csv_writer = CSVWriter()
+    csv_writer = CSVWriter('orders.csv')
     csv_content = csv_writer.write(orders)
     response = HttpResponse(csv_content, content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="orders.csv"'
