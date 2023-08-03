@@ -26,3 +26,6 @@ def profit_loss(request):
     total_purchase_orders = 500  # Replace with actual calculation
     profit_loss = total_sales - total_purchase_orders  # Replace with actual calculation
     return render(request, 'profit_loss.html', {'total_sales': total_sales, 'total_purchase_orders': total_purchase_orders, 'profit_loss': profit_loss})
+
+def index_view(request):
+    return render(request, 'index.html')
