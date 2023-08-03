@@ -1,4 +1,4 @@
-from product import Product
+from accounting.product import Product
 
 class Order:
     """Represents an order with an ID, customer name, product, quantity, and order date."""
