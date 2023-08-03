@@ -87,7 +87,7 @@ DATABASES = {
     },
 }
 
-DATABASE_ROUTERS = ['path.to.your.router.AccountingRouter']
+DATABASE_ROUTERS = ['Accounting.Router']
 
 
 # Password validation
