@@ -1,3 +1,0 @@
-
-# 2023-08-03 06:37:25.700394
-+Create a custom model for your ledger: This would involve creating a new Django model (e.g., ActivityLog) that records the information you're interested in. Whenever an important action occurs in your application (like creating, updating, or deleting an instance), you would create a new ActivityLog instance with the relevant details. This approach is more flexible and makes it easy to query and analyze your activity log, but it requires more initial setup. 

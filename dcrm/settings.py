@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'formulas',
     'accounting',
     'crispy_forms',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

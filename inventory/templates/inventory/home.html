@@ -20,23 +20,14 @@
                 </div>
             </div>
         </div>
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Suppliers</h5>
-                <a href="{% url 'inventory:suppliers' %}" class="btn btn-primary">View</a>
-                <a href="{% url 'inventory:new_supplier' %}" class="btn btn-secondary">Add</a>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Suppliers</h5>
+                    <a href="{% url 'inventory:suppliers' %}" class="btn btn-primary">View</a>
+                    <a href="{% url 'inventory:new_supplier' %}" class="btn btn-secondary">Add</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Sales Orders</h5>
-                <a href="{% url 'inventory:sales_orders' %}" class="btn btn-primary">View</a>
-                <a href="{% url 'inventory:new_sales_order' %}" class="btn btn-secondary">Add</a>
-            </div>
-        </div>
-    </div>
     </div>
 {% endblock %}
