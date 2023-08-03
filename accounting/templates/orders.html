@@ -11,6 +11,7 @@ Orders
     {% csrf_token %}
     {{ form|crispy }}
     <button type="submit" class="btn btn-primary">Generate Orders</button>
+    <a href="{% url 'accounting:export_orders' %}" class="btn btn-secondary">Export to CSV</a>
 </form>
 {% if orders %}
 <table class="table">

@@ -11,5 +11,5 @@ urlpatterns = [
     path('profit_loss/', views.profit_loss, name='profit_loss'),
     path('index/', views.index_view, name='index'),  # Corrected line
     path('generate_orders/', views.generate_orders, name='generate_orders'),
-    path('export_orders/', views.export_orders, name='export_orders'),
+    path('orders/export/', views.export_orders, name='export_orders'),
 ]
