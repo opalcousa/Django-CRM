@@ -30,6 +30,7 @@ class OrderGenerator:
             self.customers.append(customer_name)  # Add the new customer to the list
         else:
             customer_name = random.choice(self.customers)
+        order_quantity = int(self._get_order_quantity())
         product_names = np.random.choice(self.PRODUCTS, size=order_quantity, replace=False,
                                          p=self._get_product_probabilities())
         quantities = [int(self._get_order_quantity()) for _ in range(len(product_names))]
