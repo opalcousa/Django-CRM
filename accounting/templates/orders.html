@@ -6,39 +6,37 @@ Orders
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1>Orders</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">Generate Orders</button>
-    </form>
-    {% if orders %}
-    <table class="table">
-        <thead>
+<h1>Orders</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Generate Orders</button>
+</form>
+{% if orders %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order Number</th>
+            <th>Order Date</th>
+            <th>Customer Name</th>
+            <th>Products Purchased</th>
+            <th>Total Purchase Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% regroup orders|dictsort:"order_date" by order_date as order_list %}
+        {% for date_orders in order_list %}
+            {% for order in date_orders.list %}
             <tr>
-                <th>Order Number</th>
-                <th>Order Date</th>
-                <th>Customer Name</th>
-                <th>Products Purchased</th>
-                <th>Total Purchase Price</th>
+                <td>{{ order.id }}</td>
+                <td>{{ order.order_date }}</td>
+                <td>{{ order.customer_name }}</td>
+                <td>{{ order.product_names }}</td>
+                <td>{{ order.total_price }}</td>
             </tr>
-        </thead>
-        <tbody>
-            {% regroup orders|dictsort:"order_date" by order_date as order_list %}
-            {% for date_orders in order_list %}
-                {% for order in date_orders.list %}
-                <tr>
-                    <td>{{ order.id }}</td>
-                    <td>{{ order.order_date }}</td>
-                    <td>{{ order.customer_name }}</td>
-                    <td>{{ order.product_names }}</td>
-                    <td>{{ order.total_price }}</td>
-                </tr>
-                {% endfor %}
             {% endfor %}
-        </tbody>
-    </table>
-    {% endif %}
-</div>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
 {% endblock %}
