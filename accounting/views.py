@@ -28,4 +28,13 @@ def profit_loss(request):
     return render(request, 'profit_loss.html', {'total_sales': total_sales, 'total_purchase_orders': total_purchase_orders, 'profit_loss': profit_loss})
 
 def index_view(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html')from django.shortcuts import render
+from .order_generator import OrderGenerator
+import datetime
+
+def generate_orders(request):
+    start_date = datetime.date(2021, 1, 1)
+    end_date = datetime.date(2021, 12, 31)
+    order_generator = OrderGenerator(start_date, end_date)
+    orders = order_generator.generate_orders(10)
+    return render(request, 'accounting/orders.html', {'orders': orders})

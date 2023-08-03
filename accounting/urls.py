@@ -11,3 +11,9 @@ urlpatterns = [
     path('profit_loss/', views.profit_loss, name='profit_loss'),
     path('index/', views.index_view, name='index_view'),  # Add this line
 ]
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('generate_orders/', views.generate_orders, name='generate_orders'),
+]
