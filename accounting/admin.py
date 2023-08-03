@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Product
 from accounting.order import Order
+from accounting.product import Product
 
 admin.site.register(Product)
 admin.site.register(Order)
