@@ -37,7 +37,10 @@ class OrderGenerator:
         product_names = ', '.join(f'{name} ({quantity})' for name, quantity in zip(product_names, quantities))
         order_date = self.faker.date_between_dates(date_start=self.start_date, date_end=self.end_date)
         order_date_str = order_date.strftime('%Y-%m-%d')
-        total_price = sum([self.PRICES[self.PRODUCTS.index(product_name.split(' (')[0])] * quantity for product_name, quantity in zip(product_names.split(', '), quantities)])
+        total_quantity = sum(quantities)
+        sets_of_three = total_quantity // 3
+        individual_products = total_quantity % 3
+        total_price = sets_of_three * 25 + individual_products * 10
         return {'customer_name': customer_name, 'product_names': product_names, 'order_date': order_date_str,
                 'total_price': total_price}
 
