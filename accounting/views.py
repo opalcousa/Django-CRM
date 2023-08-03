@@ -38,3 +38,13 @@ def generate_orders(request):
     order_generator = OrderGenerator(start_date, end_date)
     orders = order_generator.generate_orders(10)
     return render(request, 'accounting/orders.html', {'orders': orders})
+from django.shortcuts import render
+from .order_generator import OrderGenerator
+import datetime
+
+def generate_orders(request):
+    start_date = datetime.date(2021, 1, 1)
+    end_date = datetime.date(2021, 12, 31)
+    order_generator = OrderGenerator(start_date, end_date)
+    orders = order_generator.generate_orders(10)
+    return render(request, 'accounting/orders.html', {'orders': orders})
