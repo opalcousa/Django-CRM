@@ -73,8 +73,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'mongodb': {
+        'ENGINE': 'djongo',
+        'NAME': 'your-db-name',
     }
 }
+
+DATABASE_ROUTERS = ['path.to.your.router.AccountingRouter']
 
 
 # Password validation
