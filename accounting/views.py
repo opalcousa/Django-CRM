@@ -62,7 +62,7 @@ def generate_orders(request):
         product_names = order['product_names'].split(', ')
         for product_name in product_names:
             product, created = Product.objects.get_or_create(name=product_name)
-            Order.objects.create(customer_name=order['customer_name'], product=product, order_date=order['order_date'])
+            Order.objects.create(customer_name=order['customer_name'], product=product, order_date=order['order_date'], total_price=order['total_price'])
     return JsonResponse({"message": "Orders generated and saved to the database."})
 
 def generate_orders(request):
@@ -72,7 +72,7 @@ def generate_orders(request):
         product_names = order['product_names'].split(', ')
         for product_name in product_names:
             product, created = Product.objects.get_or_create(name=product_name)
-            Order.objects.create(customer_name=order['customer_name'], product=product, order_date=order['order_date'])
+            Order.objects.create(customer_name=order['customer_name'], product=product, order_date=order['order_date'], total_price=order['total_price'])
     return JsonResponse({"message": "Orders generated and saved to the database."})
 
 def profit_loss(request):
