@@ -87,7 +87,7 @@ DATABASES = {
     },
 }
 
-DATABASE_ROUTERS = ['Accounting.Router']
+DATABASE_ROUTERS = ['accounting.router.AccountingRouter']
 
 
 # Password validation
