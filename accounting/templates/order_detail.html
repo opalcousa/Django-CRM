@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Order Detail
+{% endblock %}
+
+{% block content %}
+<h1>Order #{{ order.id }}</h1>
+<p>Customer: {{ order.customer_name }}</p>
+<p>Product: {{ order.product.name }}</p>
+<p>Quantity: {{ order.quantity }}</p>
+<p>Total Price: ${{ order.product.price * order.quantity }}</p>
+<p>Order Date: {{ order.order_date }}</p>
+{% endblock %}
