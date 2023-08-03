@@ -71,10 +71,6 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    },
-    'mongodb': {
         'ENGINE': 'djongo',
         'ENFORCE_SCHEMA': False,
         'NAME': os.getenv('MONGO_DATABASE'),
