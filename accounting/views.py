@@ -51,7 +51,7 @@ def generate_orders(request):
             return render(request, 'orders.html', {'orders': orders, 'form': form})
     else:
         form = OrderGeneratorForm()
-    return render(request, 'accounting/orders.html', {'form': form})
+    return render(request, 'orders.html', {'form': form})
 
 def export_orders(request):
     orders = Order.objects.all()
