@@ -30,15 +30,13 @@ class OrderGenerator:
             self.customers.append(customer_name)  # Add the new customer to the list
         else:
             customer_name = random.choice(self.customers)
-        order_quantity = int(self._get_order_quantity())
         product_names = np.random.choice(self.PRODUCTS, size=order_quantity, replace=False,
                                          p=self._get_product_probabilities())
-        order_quantity_per_product = order_quantity
-        product_names = ', '.join(product_names)
+        quantities = [int(self._get_order_quantity()) for _ in range(len(product_names))]
+        product_names = ', '.join(f'{name} ({quantity})' for name, quantity in zip(product_names, quantities))
         order_date = self.faker.date_between_dates(date_start=self.start_date, date_end=self.end_date)
         order_date_str = order_date.strftime('%Y-%m-%d')
-        total_price = sum([self.PRICES[self.PRODUCTS.index(product_name)] for product_name in
-                           product_names.split(', ')]) * order_quantity
+        total_price = sum([self.PRICES[self.PRODUCTS.index(product_name.split(' ')[0])] * quantity for product_name, quantity in zip(product_names.split(', '), quantities)])
         return {'customer_name': customer_name, 'product_names': product_names, 'order_date': order_date_str,
                 'total_price': total_price}
 
