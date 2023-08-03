@@ -81,6 +81,17 @@ DATABASES = {
             'authMechanism': 'SCRAM-SHA-1',
         },
     },
+    'mongodb': {
+        'ENGINE': 'djongo',
+        'ENFORCE_SCHEMA': False,
+        'NAME': os.getenv('MONGO_DATABASE'),
+        'CLIENT': {
+            'host': os.getenv('DATABASE_URL'),
+            'username': os.getenv('MONGO_USERNAME'),
+            'password': os.getenv('MONGO_PASSWORD'),
+            'authMechanism': 'SCRAM-SHA-1',
+        },
+    },
 }
 
 DATABASE_ROUTERS = ['accounting.router.AccountingRouter']
