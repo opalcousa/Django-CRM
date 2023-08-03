@@ -1,10 +1,9 @@
-class Product:
-    """Represents a product with a name and a price."""
+from django.db import models
 
-    def __init__(self, name, price):
-        """Initializes a new product with a name and a price."""
-        self.name = name
-        self.price = price
+class Product(models.Model):
+    """Represents a product with a name and a price."""
+    name = models.CharField(max_length=200)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
 
     def get_price(self, quantity):
         """Returns the total price for a given quantity of the product."""
