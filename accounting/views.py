@@ -57,13 +57,23 @@ def product_detail(request, product_id):
 
 def generate_orders(request):
     order_generator = OrderGenerator(datetime.date.today() - datetime.timedelta(days=30), datetime.date.today())
-    orders = order_generator.generate_orders(10)
-    return JsonResponse(orders, safe=False)
+    generated_orders = order_generator.generate_orders(10)
+    for order in generated_orders:
+        product_names = order['product_names'].split(', ')
+        for product_name in product_names:
+            product, created = Product.objects.get_or_create(name=product_name)
+            Order.objects.create(customer_name=order['customer_name'], product=product, order_date=order['order_date'])
+    return JsonResponse({"message": "Orders generated and saved to the database."})
 
 def generate_orders(request):
     order_generator = OrderGenerator(datetime.date.today() - datetime.timedelta(days=30), datetime.date.today())
-    orders = order_generator.generate_orders(10)
-    return JsonResponse(orders, safe=False)
+    generated_orders = order_generator.generate_orders(10)
+    for order in generated_orders:
+        product_names = order['product_names'].split(', ')
+        for product_name in product_names:
+            product, created = Product.objects.get_or_create(name=product_name)
+            Order.objects.create(customer_name=order['customer_name'], product=product, order_date=order['order_date'])
+    return JsonResponse({"message": "Orders generated and saved to the database."})
 
 def profit_loss(request):
     # TODO: Implement the logic for the profit and loss statement
