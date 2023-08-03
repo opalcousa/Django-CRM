@@ -1,15 +1,13 @@
+from django.db import models
 from accounting.product import Product
 
-class Order:
+class Order(models.Model):
     """Represents an order with an ID, customer name, product, quantity, and order date."""
-
-    def __init__(self, id, customer_name, product, quantity, order_date):
-        """Initializes a new order with an ID, customer name, product, quantity, and order date."""
-        self.id = id
-        self.customer_name = customer_name
-        self.product = product
-        self.quantity = quantity
-        self.order_date = order_date
+    id = models.AutoField(primary_key=True)
+    customer_name = models.CharField(max_length=200)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.IntegerField()
+    order_date = models.DateField()
 
     def get_total_price(self):
         """Returns the total price of the order."""
