@@ -57,6 +57,8 @@ import os
 
 def export_orders(request):
     orders = Order.objects.all()
+    if not orders:
+        return HttpResponse("No orders found.")
     os.makedirs('reports', exist_ok=True)
     csv_writer = CSVWriter('orders.csv')
     csv_content = csv_writer.write(orders)
