@@ -30,8 +30,16 @@ Orders
             <td>{{ order.id }}</td>
             <td>{{ order.order_date }}</td>
             <td>{{ order.customer_name }}</td>
-            <td>{{ order.product.name }}</td>
-            <td>{{ order.quantity }}</td>
+            <td>
+                {% for product in order.products.all %}
+                    {{ product.name }}<br>
+                {% endfor %}
+            </td>
+            <td>
+                {% for product in order.products.all %}
+                    {{ product.quantity }}<br>
+                {% endfor %}
+            </td>
             <td>{{ order.total_price }}</td>
         </tr>
         {% endfor %}
