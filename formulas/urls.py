@@ -1,8 +1,7 @@
 from django.urls import path
 from . import views
 
-app_name = 'formulas'  # This is new
-
+app_name = 'formulas'
 urlpatterns = [
     path('', views.index, name='index'),
     path('<int:formula_id>/', views.detail, name='detail'),
