@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
-from .models import Order, Product
+from .models import Order
+from accounting.product import Product
 from .order_generator import OrderGenerator
 import datetime
 from .order_generator import OrderGenerator
