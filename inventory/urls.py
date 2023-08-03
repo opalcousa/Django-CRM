@@ -8,6 +8,7 @@ urlpatterns = [
     path('products/<int:pk>/', views.ProductDetailView.as_view(), name='product_detail'),
     path('products/new/', views.ProductCreateView.as_view(), name='new_product'),
     path('products/<int:pk>/edit/', views.ProductUpdateView.as_view(), name='edit_product'),
+    path('products/<int:pk>/delete/', views.ProductDeleteView.as_view(), name='delete_product'),
     path('stocks/', views.StockListView.as_view(), name='stocks'),
     path('stocks/<int:pk>/', views.StockDetailView.as_view(), name='stock_detail'),
     path('stocks/new/', views.StockCreateView.as_view(), name='new_stock'),
@@ -15,4 +16,7 @@ urlpatterns = [
     path('suppliers/', views.SupplierListView.as_view(), name='suppliers'),
     path('suppliers/<int:pk>/', views.SupplierDetailView.as_view(), name='supplier_detail'),
     path('suppliers/new/', views.SupplierCreateView.as_view(), name='new_supplier'),
+    path('suppliers/<int:pk>/edit/', views.SupplierUpdateView.as_view(), name='edit_supplier'),
+    path('stocks/<int:pk>/delete/', views.StockDeleteView.as_view(), name='delete_stock'),
+    path('suppliers/<int:pk>/delete/', views.SupplierDeleteView.as_view(), name='delete_supplier'),
 ]
