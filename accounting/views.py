@@ -3,6 +3,8 @@ from django.shortcuts import get_object_or_404
 from .models import Order, Product
 from .order_generator import OrderGenerator
 import datetime
+from .order_generator import OrderGenerator
+import datetime
 
 def index_view(request):
     return JsonResponse({"message": "Welcome to the Accounting Application"})
@@ -52,6 +54,11 @@ def product_detail(request, product_id):
         'name': product.name,
         'price': product.price
     })
+
+def generate_orders(request):
+    order_generator = OrderGenerator(datetime.date.today() - datetime.timedelta(days=30), datetime.date.today())
+    orders = order_generator.generate_orders(10)
+    return JsonResponse(orders, safe=False)
 
 def generate_orders(request):
     order_generator = OrderGenerator(datetime.date.today() - datetime.timedelta(days=30), datetime.date.today())
