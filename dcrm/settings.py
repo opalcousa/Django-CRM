@@ -77,7 +77,11 @@ DATABASES = {
     'mongodb': {
         'ENGINE': 'djongo',
         'ENFORCE_SCHEMA': False,
-        'NAME': os.getenv('DATABASE_URL'),
+        'NAME': os.getenv('MONGO_DATABASE'),
+        'CLIENT': {
+            'host': os.getenv('DATABASE_URL'),
+            'authMechanism': 'SCRAM-SHA-1',
+        },
     },
 }
 
