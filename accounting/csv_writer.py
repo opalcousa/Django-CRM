@@ -9,15 +9,7 @@ class CSVWriter:
     def write(self, orders):
         output = io.StringIO()
         writer = csv.writer(output)
-        writer.writerow(['Customer Name', 'Product Name', 'Order Date', 'Total Price'])
-        total_revenue = 0
+        writer.writerow(['Order Number', 'Order Date', 'Customer Name', 'Products Purchased', 'Total Purchase Price'])
         for order in orders:
-            order = list(order)
-            if isinstance(order[1], list):
-                order[1] = ', '.join(order[1])
-            if isinstance(order[3], str) and order[3].isdigit():
-                order[3] = int(order[3])
-            if isinstance(order[3], int):
-                total_revenue += order[3]
-            writer.writerow(order)
+            writer.writerow([order.id, order.order_date, order.customer_name, ', '.join([str(p) for p in order.product_names]), order.total_price])
         return output.getvalue()
