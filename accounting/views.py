@@ -55,3 +55,12 @@ def generate_orders(request):
 
 def index_view(request):
     return render(request, 'index.html')
+
+def export_orders(request):
+    orders = Order.objects.all()
+    csv_writer = CSVWriter('orders.csv')
+    csv_writer.write(orders)
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="orders.csv"'
+    csv_writer.write(orders, response)
+    return response
