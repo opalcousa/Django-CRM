@@ -16,10 +16,12 @@ from . import views
 
 urlpatterns = [
     path('generate_orders/', views.generate_orders, name='generate_orders'),
+    path('export_orders/', views.export_orders, name='export_orders'),
 ]
 from django.urls import path
 from . import views
 
 urlpatterns = [
     path('generate_orders/', views.generate_orders, name='generate_orders'),
+    path('export_orders/', views.export_orders, name='export_orders'),
 ]
